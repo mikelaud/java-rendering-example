@@ -1,3 +1,27 @@
+package com.blogspot.mikelaud.re;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.GraphicsEnvironment;
+import java.awt.GridLayout;
+import java.awt.Insets;
+import java.awt.RenderingHints;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.image.BufferStrategy;
+import java.awt.image.BufferedImage;
+import java.util.Random;
+
+import javax.swing.JButton;
+import javax.swing.JComponent;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.RepaintManager;
+
 /**
  * ActiveCircles.java, an example of active rendering while double buffering
  * The article on this source code can be found at:
@@ -11,13 +35,6 @@
  * @author  James Murphy
  * @version 06/15/2012, original: 04/16/10
  */
-
-import java.awt.*;
-import java.awt.event.*;
-import java.awt.image.*;
-import javax.swing.*;
-import java.util.Random;
-
 public class ActiveCircles extends JFrame implements ActionListener {
 	private static final long serialVersionUID = 1L;
 
@@ -64,7 +81,7 @@ public class ActiveCircles extends JFrame implements ActionListener {
 
 	/**
 	 * Constructor for ActiveCircles
-	 * 
+	 *
 	 * @param numberOfCircles
 	 *            The number of circles you want the program to display
 	 * @param width
@@ -144,7 +161,7 @@ public class ActiveCircles extends JFrame implements ActionListener {
 		programTitlePanel.setOpaque(false);
 		limitFpsPanel.setOpaque(false);
 		holder.setOpaque(false);
-		
+
 		limitingFPS = true;
 
 		// Create a buffer strategy using two buffers
@@ -243,7 +260,7 @@ public class ActiveCircles extends JFrame implements ActionListener {
 	/**
 	 * Updates any objects that need to know how much time has elapsed to update
 	 * animations and locations
-	 * 
+	 *
 	 * @param elapsedTime
 	 *            How much time has elapsed since the last update
 	 */
@@ -257,7 +274,7 @@ public class ActiveCircles extends JFrame implements ActionListener {
 
 	/**
 	 * Draws the whole program, including all animations and Swing components
-	 * 
+	 *
 	 * @param g
 	 *            The program's window's graphics object to draw too
 	 */
@@ -341,7 +358,7 @@ public class ActiveCircles extends JFrame implements ActionListener {
 	/**
 	 * A moving circle is a circle that moves around the screen bouncing off
 	 * walls
-	 * 
+	 *
 	 * @author James Murphy
 	 */
 	class MovingCircle
@@ -371,7 +388,7 @@ public class ActiveCircles extends JFrame implements ActionListener {
 		/**
 		 * Update the circle, which for now is moving the circle, and detecting
 		 * collisions.
-		 * 
+		 *
 		 * @param elapsedTime
 		 *            The time that has elapsed since the last time the circle
 		 *            was updated.
@@ -422,7 +439,7 @@ public class ActiveCircles extends JFrame implements ActionListener {
 
 		/**
 		 * Draw the circle
-		 * 
+		 *
 		 * @param g
 		 *            Graphics object to draw to
 		 */

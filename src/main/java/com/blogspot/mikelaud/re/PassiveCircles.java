@@ -1,3 +1,26 @@
+package com.blogspot.mikelaud.re;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.GraphicsEnvironment;
+import java.awt.GridLayout;
+import java.awt.Insets;
+import java.awt.RenderingHints;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+
+import java.util.Random;
+import java.util.TimerTask;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
 /**
  * PassiveCircles.java, an example of passive rendering while double buffering
  * The article on this source code can be found at:
@@ -9,18 +32,8 @@
  *                    - easy locational painting such as location 0,0
  *                    - stretching an application's graphics with resizes
  * @author  James Murphy
- * @version 06/15/2012, previous: 10/13/2011, original: 04/16/10 
+ * @version 06/15/2012, previous: 10/13/2011, original: 04/16/10
  */
-
-import java.awt.*;
-import java.awt.event.*;
-import java.awt.image.BufferedImage;
-
-import javax.swing.*;
-
-import java.util.Random;
-import java.util.TimerTask;
-
 public class PassiveCircles extends JFrame implements ActionListener {
 	private static final long serialVersionUID = 1L;
 
@@ -96,7 +109,7 @@ public class PassiveCircles extends JFrame implements ActionListener {
 
 	/**
 	 * Constructor for PassiveCircles
-	 * 
+	 *
 	 * @param numberOfCircles
 	 *            The number of circles you want the program to display
 	 * @param width
@@ -333,7 +346,7 @@ public class PassiveCircles extends JFrame implements ActionListener {
 	/**
 	 * A moving circle is a circle that moves around the screen bouncing off
 	 * walls
-	 * 
+	 *
 	 * @author James Murphy
 	 */
 	class MovingCircle
@@ -363,7 +376,7 @@ public class PassiveCircles extends JFrame implements ActionListener {
 		/**
 		 * Update the circle, which for now is moving the circle, and detecting
 		 * collisions.
-		 * 
+		 *
 		 * @param elapsedTime
 		 *            The time that has elapsed since the last time the circle
 		 *            was updated.
@@ -414,7 +427,7 @@ public class PassiveCircles extends JFrame implements ActionListener {
 
 		/**
 		 * Draw the circle
-		 * 
+		 *
 		 * @param g
 		 *            Graphics object to draw to
 		 */
