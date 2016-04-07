@@ -1,0 +1,58 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.blogspot.mikelaud.fp</groupId>
+	<artifactId>java-rendering-example</artifactId>
+	<version>1.0.0</version>
+	<name>${project.artifactId}</name>
+	<description>${project.artifactId}</description>
+
+	<properties>
+		<re.java.version>1.8</re.java.version>
+		<re.junit.version>4.12</re.junit.version>
+		<re.jsr305.version>3.0.0</re.jsr305.version>
+		<re.guice.version>4.0</re.guice.version>
+		<re.guice-assistedinject.version>${re.guice.version}</re.guice-assistedinject.version>
+		<!---->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<source>${re.java.version}</source>
+						<target>${re.java.version}</target>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${re.junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.findbugs</groupId>
+			<artifactId>jsr305</artifactId>
+			<version>${re.jsr305.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.inject</groupId>
+			<artifactId>guice</artifactId>
+			<version>${re.guice.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.inject.extensions</groupId>
+			<artifactId>guice-assistedinject</artifactId>
+			<version>${re.guice-assistedinject.version}</version>
+		</dependency>
+	</dependencies>
+
+</project>
